@@ -23,6 +23,9 @@ public class UserCreateCompleteDAO {
 			preparedStatement.setString(2, loginUserPassword);
 			preparedStatement.setString(3, userName);
 			preparedStatement.setString(4, dateUtil.getDate());
+			
+			System.out.println("DAO start");
+			
 			preparedStatement.execute();
 			
 		} catch(Exception e) {
