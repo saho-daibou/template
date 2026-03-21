@@ -17,12 +17,11 @@ public class BuyItemConfirmAction extends ActionSupport implements SessionAware 
 		BuyItemCompleteDAO buyItemCompleteDAO = new BuyItemCompleteDAO();
 		
 		buyItemCompleteDAO.buyItemInfo(
-			    Integer.parseInt(session.get("id").toString()),
-			    Integer.parseInt(session.get("login_user_id").toString()),
-			    Integer.parseInt(session.get("buyItem_price").toString()),
-			    Integer.parseInt(session.get("stock").toString()),
-			    session.get("pay").toString()
-			);
+			    session.get("id").toString(),
+			    session.get("login_user_id").toString(),
+			    session.get("buyItem_price").toString(),
+			    session.get("stock").toString(),
+			    session.get("pay").toString());
 			
 		String result = SUCCESS;
 		return result;
